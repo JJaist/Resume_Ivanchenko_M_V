@@ -1,0 +1,7 @@
+# Local source resume (contains personal data)
+1_resume.txt
+
+# Local tooling and OS files
+.serena/
+.DS_Store
+
