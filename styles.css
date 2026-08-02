@@ -1,6 +1,6 @@
 :root {
   --background: #fff;
-  --footer: #f2f3f3;
+  --footer: #041b1bb3;
   --border: #e7e8e9;
   --text: #494e52;
   --muted: #7a8288;
@@ -237,6 +237,8 @@ h3 {
 .page li,
 .page dd {
   max-width: 780px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .page p {
@@ -529,3 +531,4 @@ footer p {
     text-decoration: none;
   }
 }
+
