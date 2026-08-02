@@ -22,7 +22,7 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--footer);
-  font: 12px/1.55 Helvetica, Arial, sans-serif;
+  font: 12px/1.55 Helvetica;
   text-wrap: pretty;
 }
 
@@ -100,11 +100,11 @@ a:focus-visible {
 .layout {
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
-  gap: clamp(36px, 5vw, 72px);
+  gap: 30px;
   width: min(100% - 32px, 210mm);
   min-height: 297mm;
   margin: 16px auto 80px;
-  padding: 10mm 5mm 5mm 5mm;
+  padding: 5mm 5mm 5mm 5mm;
   border: 1px solid var(--border);
   background: var(--background);
 }
@@ -195,12 +195,6 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
 
 h1,
 h2,
@@ -216,20 +210,18 @@ h1 {
 }
 
 h2 {
-  margin: 56px 0 22px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
+  margin: 5px 0 5px;
+  /* border-bottom: 1px solid var(--border); */
   font-size: 24px;
 }
 
 h3 {
-  margin-bottom: 5px;
+  margin: 0 0 5px;
   font-size: 18px;
 }
 
 .page-lead {
-  max-width: 760px;
-  color: var(--muted);
+  color: var(--footer);
   font-size: 20px;
 }
 
@@ -241,25 +233,6 @@ h3 {
   hyphens: auto;
 }
 
-.page p {
-  margin-bottom: 1.25em;
-}
-
-.page ul {
-  margin: 0 0 1.4em;
-  padding-left: 22px;
-}
-
-.page li + li {
-  margin-top: 6px;
-}
-
-.cv-item,
-.project {
-  margin-bottom: 34px;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 240px;
-}
 
 .item-heading {
   display: flex;
@@ -357,6 +330,8 @@ footer p {
       grid-template-columns: 96px 2fr 1fr;
       gap: 24px;
       align-items: center;
+      text-align: justify;
+      hyphens: auto;
   }
 
 
@@ -454,7 +429,7 @@ footer p {
 
 @page {
   size: A4 portrait;
-  margin: 12mm;
+  margin: 10mm;
 }
 
 @media print {
@@ -471,12 +446,6 @@ footer p {
     padding: 0;
     background: #fff;
     color: #000;
-  }
-
-  .skip-link,
-  .masthead,
-  footer {
-    display: none;
   }
 
   .layout {
@@ -497,13 +466,6 @@ footer p {
     width: 32mm;
   }
 
-  .page-header {
-    margin-bottom: 6mm;
-  }
-
-  h1 {
-    font-size: 25pt;
-  }
 
   h2 {
     margin: 8mm 0 3mm;
@@ -513,10 +475,6 @@ footer p {
 
   h3 {
     font-size: 10.5pt;
-  }
-
-  .page-lead {
-    font-size: 11pt;
   }
 
   .cv-item,
