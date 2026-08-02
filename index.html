@@ -12,24 +12,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#content">Перейти к содержанию</a>
-
-    <header class="masthead">
-      <div class="masthead-inner">
-        <a class="site-title" href="#top">Максим Иванченко</a>
-        <nav aria-label="Основная навигация">
-          <a href="#about">Обо мне</a>
-          <a href="#experience">Опыт</a>
-          <a href="#projects">Проекты</a>
-          <a href="#education">Образование</a>
-          <a href="#skills">Навыки</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="layout" id="top">
-      <aside class="profile" itemscope itemtype="https://schema.org/Person">
-        <div class="avatar" aria-hidden="true">МИ</div>
+    <main class="layout">
+      <aside class="profile" itemscope>
+        <div class="avatar" aria-hidden="true">М И</div>
         <div class="profile-content">
           <h2 itemprop="name">Максим Иванченко</h2>
           <p itemprop="jobTitle">
@@ -39,42 +24,25 @@
         </div>
         <ul class="profile-links">
           <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
-              <circle cx="12" cy="10" r="2.5" />
-            </svg>
             <span itemprop="address">Санкт-Петербург</span>
           </li>
           <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-              <path d="m3 7 9 6 9-6" />
-            </svg>
             <a href="mailto:bobrikoff.max@yandex.ru" itemprop="email">Email</a>
           </li>
           <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M8.5 3H5a2 2 0 0 0-2 2c0 8.84 7.16 16 16 16a2 2 0 0 0 2-2v-3.5l-4-1-1.2 2.2a13 13 0 0 1-8.5-8.5L9.5 7l-1-4Z" />
-            </svg>
             <a href="tel:+79944179941" itemprop="telephone">+7 994 417-99-41</a>
           </li>
           <li>
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18" />
-            </svg>
             <span>Готов к редким командировкам</span>
           </li>
         </ul>
       </aside>
 
-      <article class="page" id="content">
-        <header class="page-header" id="about">
-          <p class="kicker">Резюме</p>
-          <h1>Максим Иванченко</h1>
+      <article class="page">
+        <header class="page-header">
           <p class="page-lead">
-            Ведущий инженер и руководитель проектов в области АСУ ТП, информационных систем
-            и промышленной автоматизации.
+            Lead Engineer / Technical Project Lead
+            <!-- (R&D, промышленная диагностика, АСУ ТП, информационные системы) -->
           </p>
         </header>
 
@@ -92,7 +60,7 @@
           </p>
         </section>
 
-        <section id="experience">
+        <section>
           <h2>Опыт работы</h2>
 
           <article class="cv-item">
@@ -162,7 +130,7 @@
           </article>
         </section>
 
-        <section id="projects">
+        <section>
           <h2>Ключевые проекты</h2>
 
           <article class="project">
@@ -195,7 +163,7 @@
           </article>
         </section>
 
-        <section id="education">
+        <section>
           <h2>Образование</h2>
           <article class="cv-item">
             <div class="item-heading">
@@ -216,7 +184,7 @@
           </article>
         </section>
 
-        <section id="skills">
+        <section>
           <h2>Навыки</h2>
           <div class="skills-grid">
             <div>
@@ -238,7 +206,7 @@
           </div>
         </section>
 
-        <section id="additional">
+        <section>
           <h2>Дополнительная информация</h2>
           <dl class="details">
             <div>
@@ -261,7 +229,7 @@
     <footer>
       <div>
         <p>© 2026 Максим Иванченко</p>
-        <p>Статическая страница для GitHub Pages</p>
+        <!-- <p>Статическая страница для GitHub Pages</p> -->
       </div>
     </footer>
   </body>

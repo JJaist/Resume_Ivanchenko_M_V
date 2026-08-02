@@ -6,7 +6,6 @@
   --muted: #7a8288;
   --link: #2f7f93;
   --link-hover: #205866;
-  --header-height: 66px;
 }
 
 * {
@@ -14,17 +13,16 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 24px);
+    scroll-behavior: smooth;
+    color-scheme: light;
 }
 
 body {
   min-height: 100dvh;
   margin: 0;
-  padding-top: var(--header-height);
   color: var(--text);
-  background: var(--background);
-  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--footer);
+  font: 12px/1.55 Helvetica, Arial, sans-serif;
   text-wrap: pretty;
 }
 
@@ -69,7 +67,7 @@ a:focus-visible {
 
 .masthead-inner {
   display: flex;
-  width: min(100% - 32px, 1280px);
+  width: min(100% - 32px, 210mm);
   min-height: var(--header-height);
   margin-inline: auto;
   align-items: center;
@@ -101,10 +99,14 @@ a:focus-visible {
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(180px, 250px) minmax(0, 1fr);
+  grid-template-columns: 120px minmax(0, 1fr);
   gap: clamp(36px, 5vw, 72px);
-  width: min(100% - 32px, 1280px);
-  margin: 32px auto 80px;
+  width: min(100% - 32px, 210mm);
+  min-height: 297mm;
+  margin: 16px auto 80px;
+  padding: 10mm 5mm 5mm 5mm;
+  border: 1px solid var(--border);
+  background: var(--background);
 }
 
 .profile {
@@ -177,7 +179,7 @@ a:focus-visible {
 .page {
   min-width: 0;
   max-width: 870px;
-  padding-right: clamp(0px, 5vw, 64px);
+  padding-right: 0;
 }
 
 .page-header {
@@ -332,7 +334,7 @@ footer {
 
 footer > div {
   display: flex;
-  width: min(100%, 1280px);
+  width: min(100%, 210mm);
   margin-inline: auto;
   justify-content: space-between;
   gap: 24px;
@@ -349,16 +351,13 @@ footer p {
   }
 
   .profile {
-    position: static;
-    display: grid;
-    grid-template-columns: 84px minmax(160px, 1fr) minmax(220px, 1fr);
-    gap: 20px;
-    align-items: center;
+      display: grid;
+      grid-template-columns: 96px 2fr 1fr;
+      gap: 24px;
+      align-items: center;
   }
 
-  .avatar {
-    width: 84px;
-  }
+
 
   .profile h2 {
     margin-top: 0;
@@ -403,6 +402,9 @@ footer p {
 
   .layout {
     margin-top: 24px;
+    padding: 24px 20px 40px;
+    border-right: 0;
+    border-left: 0;
   }
 
   .profile {
@@ -445,5 +447,85 @@ footer p {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
+@media print {
+  :root {
+    --header-height: 0px;
+  }
+
+  html {
+    font-size: 9pt;
+  }
+
+  body {
+    min-height: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+  }
+
+  .skip-link,
+  .masthead,
+  footer {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: 42mm minmax(0, 1fr);
+    gap: 8mm;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .profile {
+    position: static;
+  }
+
+  .avatar {
+    width: 32mm;
+  }
+
+  .page-header {
+    margin-bottom: 6mm;
+  }
+
+  h1 {
+    font-size: 25pt;
+  }
+
+  h2 {
+    margin: 8mm 0 3mm;
+    padding-bottom: 2mm;
+    font-size: 14pt;
+  }
+
+  h3 {
+    font-size: 10.5pt;
+  }
+
+  .page-lead {
+    font-size: 11pt;
+  }
+
+  .cv-item,
+  .project,
+  .skills-grid,
+  .details {
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 }
