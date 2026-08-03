@@ -13,10 +13,16 @@
   </head>
   <body>
     <main class="layout">
-      <aside class="profile" itemscope>
-        <div class="avatar" aria-hidden="true">М И</div>
+
+
+
+      <aside class="profile" itemtype="https://schema.org/Person">
+        <div class="avatar" aria-hidden="true">
+          <!-- сюда мое фото -->
+        </div>
+
         <div class="profile-content">
-          <h2 itemprop="name">Максим Иванченко</h2>
+          <h3>Иванченко Максим Вадимович</h3>
           <p itemprop="jobTitle">
             Ведущий инженер<br />
             Руководитель технических проектов
@@ -58,7 +64,7 @@
               <div>
                 <h4>Руководитель направления вибродиагностики ГПА</h4>
                 <p class="organization">ООО «НПФ «Система-Сервис»</p>
-                <p class="date"><time datetime="2023-07">Июль 2023</time> — наст. врем.</p>
+                <p class="date"><time datetime="2023-07">Июль 2023</time> — наст. время</p>
               </div>
               <div  class="company-logo">
                   <a class="company-link"
@@ -150,28 +156,48 @@
           <h3>Образование</h3>
 
           <div class="three-column-list">
-
             <div class="three-column-item">
+
+              <div class="item-heading">
+
+              <div class="item-info">
               <h4>Бакалавр</h4>
-              <p class="organization">Группа компаний «БиоЛайн»</p>
-              <p class="date"><time datetime="2022-06">Июнь 2022</time> — 
-                <time datetime="2023-07">июль 2023</time></p>
+              <p class="organization">СПБГЭТУ «ЛЭТИ»</p>
+              </div>
+              <a class="company-link"
+              href="https://leti.ru/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="СПБГЭТУ «ЛЭТИ»">
+              <img
+                  class="leti_logo"
+                  src="images/Leti.svg"
+                  alt="ЛЭТИ">
+
+              </a>
+
+              </div>
+
+              <p class="date">
+              <time datetime="2016-09">2016</time> —
+              <time datetime="2020-06">2020</time>
+              </p>
+
             </div>
 
 
             <div class="three-column-item">
               <h4>Магистр</h4>
-              <p class="organization">Группа компаний «БиоЛайн»</p>
-              <p class="date"><time datetime="2022-06">Июнь 2022</time> — 
-                <time datetime="2023-07">июль 2023</time></p>
+              <p class="organization">СПБГЭТУ «ЛЭТИ»</p>
+              <p class="date"><time datetime="2020-09">2020</time> — 
+                <time datetime="2022-07">2022</time></p>
             </div>
 
             
             <div class="three-column-item">
               <h4>Аспирант</h4>
-              <p class="organization">Группа компаний «БиоЛайн»</p>
-              <p class="date"><time datetime="2022-06">Июнь 2022</time> — 
-                <time datetime="2023-07">июль 2023</time></p>
+              <p class="organization">СПБГЭТУ «ЛЭТИ»</p>
+              <p class="date"><time datetime="2022-06">2025</time> — наст. время</p>
             </div>
           </div>
 
@@ -186,36 +212,7 @@
 
 
 
-          <article class="project">
-            <h3>Система вибродиагностики ГПА</h3>
-            <p class="project-meta">C++ · Qt · SCADA · обработка сигналов</p>
-            <p>
-              Спроектировал и разработал систему полного цикла: приём данных с АЦП, обработка,
-              передача по промышленным протоколам и визуализация с интеграцией в SCADA.
-              Сформировал архитектуру и требования, провёл тестирование и пусконаладку.
-            </p>
-          </article>
-
-          <article class="project">
-            <h3>Мониторинг температурного поля</h3>
-            <p class="project-meta">Восстановление · интеграция · пусконаладка</p>
-            <p>
-              Восстановил неэксплуатируемую итальянскую систему на спутниковом испытательном
-              заводе, организовал монтаж, настройку оборудования и интеграцию с ПО. Система
-              введена в эксплуатацию и передана заказчику.
-            </p>
-          </article>
-
-          <article class="project">
-            <h3>Защита объектов критической информационной инфраструктуры</h3>
-            <p class="project-meta">187-ФЗ · ФСТЭК № 235 и № 239 · аудит АСУ ТП</p>
-            <p>
-              Анализ угроз и архитектуры АСУ ТП, разработка требований к информационной
-              безопасности, выездные аудиты и контроль проектной документации.
-            </p>
-          </article>
-        </section>
-
+        
         <section>
           <h2>Образование</h2>
           <article class="cv-item">
