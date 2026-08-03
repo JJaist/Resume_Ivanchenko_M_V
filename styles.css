@@ -79,10 +79,11 @@ body {
   border-radius: 20%;
 }
 
-.profile-content p {
+.profile-content {
   margin: 0 0 15px;
   font-size: 14px;
-  text-align: center;
+  
+  text-align: justify;
 }
 
 .profile-links {
