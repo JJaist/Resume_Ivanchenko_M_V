@@ -15,11 +15,9 @@
   --column-gap: 5mm;
 }
 
-
-
 @font-face {
-    font-family: "Inter";
-    src: url("./Inter/Inter-Regular.woff2");
+  font-family: "Inter";
+  src: url("./Inter/static/Inter_18pt-Regular.ttf") format("truetype");
 }
 /* =========================================================
    БАЗОВЫЕ СТИЛИ
@@ -74,6 +72,7 @@ body {
    ========================================================= */
 .profile {
   align-self: start;
+  min-width: 0;
 }
 
 .avatar {
@@ -87,8 +86,6 @@ body {
 
 .profile-content {
   margin: 0 0 15px;
-  font-size: 14px;
-  
   text-align: justify;
 }
 
@@ -96,14 +93,29 @@ body {
   display: grid;
   gap: 7px;
 
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  min-width: 0;
+  margin: 5px 0;
+  padding: 5px;
 
   list-style: none;
 }
 
 .profile-links li {
-  font-size: 13px;
+  width: 100%;
+  min-width: 0;
+  text-align: justify;
+  font-size: 14px;
+  padding: 5px;
+  overflow-wrap: anywhere;
+}
+
+.profile-links a {
+  overflow-wrap: anywhere;
+}
+
+.profile-links li:last-child span {
+  display: block;
 }
 
 /* =========================================================
@@ -117,7 +129,7 @@ body {
 }
 
 .leti-logo {
-  width: 50px;
+  width: 40px;
   height: auto;
 }
 
@@ -172,9 +184,8 @@ h4 {
 .item-heading {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
   column-gap: 24px;
-
+  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -186,11 +197,10 @@ h4 {
 
 .university {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 0;
   text-align: justify;
   text-align-last: justify;
-  
 }
 
 .date {
@@ -199,40 +209,25 @@ h4 {
   margin-bottom: 0;
 }
 
-
 /* =========================================================
    СПИСКИ В КОЛОНКАХ
    ========================================================= */
 
-.four-column-list {
+.three-column-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
 }
 
-.four-column-item {
+.three-column-item {
   display: grid;
   place-content: center;
   justify-items: center;
   gap: 8px;
   text-align: center;
-  width: 110px;
+  width: 180px;
   border: 1px solid var(--border);
-  border-radius: 20%;
-  padding: 10px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 26px 40px;
-
-  break-inside: avoid;
-}
-
-.skills-grid p {
-  margin-bottom: 0;
-  color: var(--muted);
+  border-radius: 10%;
 }
 
 /* =========================================================
