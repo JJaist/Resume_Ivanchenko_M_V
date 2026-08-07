@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#041b1b" />
+  <rect x="48" y="48" width="1104" height="534" rx="10" fill="#ffffff" />
+  <text x="104" y="226" fill="#494e52" font-family="Arial, sans-serif" font-size="62" font-weight="700">Максим Иванченко</text>
+  <text x="104" y="310" fill="#7a8288" font-family="Arial, sans-serif" font-size="34">Project Manager / R&amp;D Lead</text>
+  <rect x="104" y="366" width="992" height="2" fill="#e7e8e9" />
+  <text x="104" y="432" fill="#494e52" font-family="Arial, sans-serif" font-size="28">Резюме</text>
+</svg>

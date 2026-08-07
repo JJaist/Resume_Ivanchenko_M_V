@@ -1,9 +1,10 @@
 :root {
-  --background: #ffffff;
-  --footer: #041b1bb3;
-  --border: #e7e8e9;
-  --text: #494e52;
-  --muted: #7a8288;
+  --page-background: #041b1bb3;
+  --page-surface: #ffffff;
+  --border-color: #e7e8e9;
+  --divider-color: #d9d9d9;
+  --text-color: #494e52;
+  --muted-text-color: #7a8288;
 
   /* Фиксированные размеры листа A4 */
   --page-width: 210mm;
@@ -18,10 +19,44 @@
 @font-face {
   font-family: "Inter";
   src: url("./Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
-/* =========================================================
-   БАЗОВЫЕ СТИЛИ
-   ========================================================= */
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter/static/Inter_18pt-Italic.ttf") format("truetype");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter/static/Inter_18pt-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter/static/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* БАЗОВЫЕ СТИЛИ */
 
 *,
 *::before,
@@ -40,17 +75,16 @@ body {
   margin: 0;
   overflow-x: auto;
 
-  color: var(--text);
-  background: var(--footer);
+  color: var(--text-color);
+  background: var(--page-background);
 
-  font-family: "Inter";
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.25;
+  font-synthesis: none;
 }
 
-/* =========================================================
-   ЛИСТ A4
-   ========================================================= */
+/* ЛИСТ A4 */
 
 .layout {
   display: grid;
@@ -63,13 +97,12 @@ body {
   margin: 16px auto 50px;
   padding: var(--page-padding);
 
-  background: var(--background);
-  border: 1px solid var(--border);
+  background: var(--page-surface);
+  border: 1px solid var(--border-color);
 }
 
-/* =========================================================
-   ЛЕВАЯ КОЛОНКА
-   ========================================================= */
+/* ЛЕВАЯ КОЛОНКА */
+
 .profile {
   align-self: start;
   min-width: 0;
@@ -80,8 +113,9 @@ body {
   width: 140px;
   aspect-ratio: 1;
   margin-bottom: 5px;
-  border: 1px solid var(--border);
-  border-radius: 20%;
+
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
 }
 
 .profile-content {
@@ -89,11 +123,17 @@ body {
   text-align: justify;
 }
 
+.profile-name,
+.page-title {
+  margin: 5px 0;
+  font-size: 24px;
+  line-height: normal;
+}
+
 .profile-links {
   display: grid;
   gap: 7px;
 
-  width: 100%;
   min-width: 0;
   margin: 5px 0;
   padding: 5px;
@@ -102,12 +142,12 @@ body {
 }
 
 .profile-links li {
-  width: 100%;
   min-width: 0;
-  text-align: justify;
-  font-size: 14px;
   padding: 5px;
+
   overflow-wrap: anywhere;
+  font-size: 14px;
+  text-align: left;
 }
 
 .profile-links a {
@@ -118,9 +158,7 @@ body {
   display: block;
 }
 
-/* =========================================================
-   ЛОГОТИПЫ
-   ========================================================= */
+/* ЛОГОТИПЫ */
 
 .logo {
   width: 100px;
@@ -133,34 +171,33 @@ body {
   height: auto;
 }
 
-/* =========================================================
-   ОСНОВНАЯ КОЛОНКА
-   ========================================================= */
+/* ОСНОВНАЯ КОЛОНКА */
 
 .page {
   min-width: 0;
-  width: 100%;
 }
 
-h2 {
-  margin: 5px 0;
-  font-size: 24px;
-}
-
-h3 {
+.section-title {
   margin: 0 0 10px;
   font-size: 18px;
+  line-height: normal;
 }
 
-h4 {
+.item-title {
   margin: 0;
   font-size: 16px;
+  line-height: normal;
 }
 
-.page p,
-.page dd {
-  margin-top: 0;
+.institution {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+}
 
+.page p {
+  margin-top: 0;
   text-align: justify;
   hyphens: auto;
 }
@@ -170,12 +207,10 @@ h4 {
   margin: 2px 0;
 
   border: 0;
-  background: #d9d9d9;
+  background: var(--divider-color);
 }
 
-/* =========================================================
-   ОПЫТ РАБОТЫ И ПРОЕКТЫ
-   ========================================================= */
+/* ОПЫТ РАБОТЫ И ПРОЕКТЫ */
 
 .cv-item {
   break-inside: avoid;
@@ -189,34 +224,24 @@ h4 {
   margin-bottom: 5px;
 }
 
-.organization {
-  color: var(--muted);
-  font-size: 14px;
+.organization,
+.university,
+.date {
   margin-bottom: 0;
+  color: var(--muted-text-color);
+  font-size: 14px;
 }
 
 .university {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 0;
-  text-align: justify;
-  text-align-last: justify;
+  text-align: left;
 }
 
-.date {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-/* =========================================================
-   СПИСКИ В КОЛОНКАХ
-   ========================================================= */
+/* СПИСКИ В КОЛОНКАХ */
 
 .three-column-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  grid-template-columns: repeat(3, 180px);
+  column-gap: 15px;
 }
 
 .three-column-item {
@@ -224,15 +249,13 @@ h4 {
   place-content: center;
   justify-items: center;
   gap: 8px;
+
   text-align: center;
-  width: 180px;
-  border: 1px solid var(--border);
-  border-radius: 10%;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
 }
 
-/* =========================================================
-   ПЕЧАТЬ
-   ========================================================= */
+/* ПЕЧАТЬ */
 
 @page {
   size: A4 portrait;
@@ -241,7 +264,7 @@ h4 {
 
 @media print {
   body {
-    background: white;
+    background: var(--page-surface);
   }
 
   .layout {
